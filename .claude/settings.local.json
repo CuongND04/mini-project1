@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:images.pexels.com)",
+      "Bash(where java:*)",
+      "Read(//c/Program Files/Android/**)",
+      "Read(//c/Program Files/**)"
+    ]
+  }
+}
