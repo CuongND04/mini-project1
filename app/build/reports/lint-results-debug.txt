@@ -1,0 +1,908 @@
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\CategoryListFragment.java:90: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                if (c.getName().toLowerCase().contains(query.toLowerCase())) {
+                                ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\CategoryListFragment.java:90: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                if (c.getName().toLowerCase().contains(query.toLowerCase())) {
+                                                             ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:157: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                    String lowerQuery = query.toLowerCase();
+                                              ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:160: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                        if (p.getName().toLowerCase().contains(lowerQuery)
+                                        ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:161: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                                || (p.getBrand() != null && p.getBrand().toLowerCase().contains(lowerQuery))
+                                                                         ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:162: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                                || p.getDescription().toLowerCase().contains(lowerQuery)) {
+                                                      ~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:2: Warning: A newer version of com.android.application than 9.0.1 is available: 9.1.0 [AndroidGradlePluginVersion]
+agp = "9.0.1"
+      ~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:10: Warning: A newer version of androidx.room:room-compiler than 2.7.1 is available: 2.8.4 [GradleDependency]
+room = "2.7.1"
+       ~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:10: Warning: A newer version of androidx.room:room-runtime than 2.7.1 is available: 2.8.4 [GradleDependency]
+room = "2.7.1"
+       ~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:13: Warning: A newer version of androidx.swiperefreshlayout:swiperefreshlayout than 1.1.0 is available: 1.2.0 [GradleDependency]
+swiperefreshlayout = "1.1.0"
+                     ~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:14: Warning: A newer version of com.github.bumptech.glide:compiler than 4.16.0 is available: 5.0.5 [NewerVersionAvailable]
+glide = "4.16.0"
+        ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:14: Warning: A newer version of com.github.bumptech.glide:glide than 4.16.0 is available: 5.0.5 [NewerVersionAvailable]
+glide = "4.16.0"
+        ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\gradle\libs.versions.toml:14: Warning: A newer version of com.github.bumptech.glide:okhttp3-integration than 4.16.0 is available: 5.0.5 [NewerVersionAvailable]
+glide = "4.16.0"
+        ~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\CartAdapter.java:75: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+                    int resId = context.getResources().getIdentifier(resName, "drawable", context.getPackageName());
+                                                       ~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\CategoryListActivity.java:61: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+                    int resId = context.getResources().getIdentifier(resName, "drawable", context.getPackageName());
+                                                       ~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\HomeCategoryAdapter.java:52: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+            int resId = context.getResources().getIdentifier(resName, "drawable", context.getPackageName());
+                                               ~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:106: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+            int resId = context.getResources().getIdentifier(resName, "drawable", context.getPackageName());
+                                               ~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:190: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+                    int resId = getResources().getIdentifier(resName, "drawable", getPackageName());
+                                               ~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\MyAppGlideModule.java:33: Warning: checkClientTrusted is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers [TrustAllX509TrustManager]
+                public void checkClientTrusted(X509Certificate[] chain, String authType) {}
+                            ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\MyAppGlideModule.java:35: Warning: checkServerTrusted is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers [TrustAllX509TrustManager]
+                public void checkServerTrusted(X509Certificate[] chain, String authType) {}
+                            ~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "TrustAllX509TrustManager":
+   This check looks for X509TrustManager implementations whose
+   checkServerTrusted or checkClientTrusted methods do nothing (thus trusting
+   any certificate chain) which could result in insecure network traffic
+   caused by trusting arbitrary TLS/SSL certificates presented by peers.
+
+   https://goo.gle/TrustAllX509TrustManager
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\MyAppGlideModule.java:31: Warning: Implementing a custom X509TrustManager is error-prone and likely to be insecure. It is likely to disable certificate validation altogether, and is non-trivial to implement correctly without calling Android's default implementation. [CustomX509TrustManager]
+            X509TrustManager trustManager = new X509TrustManager() {
+                                                ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "CustomX509TrustManager":
+   This check looks for custom X509TrustManager implementations.
+
+   https://goo.gle/CustomX509TrustManager
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\CartFragment.java:154: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                            adapter.notifyDataSetChanged();
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\CategoryListActivity.java:92: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                adapter.notifyDataSetChanged();
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\CategoryListFragment.java:78: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                    adapter.notifyDataSetChanged();
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\CategoryListFragment.java:95: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        adapter.notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\FavoriteFragment.java:83: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                    adapter.notifyDataSetChanged();
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\HomeCategoryAdapter.java:74: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                notifyDataSetChanged();
+                ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\HomeFragment.java:206: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                    categoryAdapter.notifyDataSetChanged();
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\HomeFragment.java:210: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                    productAdapter.notifyDataSetChanged();
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:48: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:53: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:149: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:253: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                reviewAdapter.notifyDataSetChanged();
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:138: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                adapter.notifyDataSetChanged();
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:149: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+            adapter.notifyDataSetChanged();
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:172: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                    adapter.notifyDataSetChanged();
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\ProfileFragment.java:156: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                    orderAdapter.notifyDataSetChanged();
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_favorite.xml:42: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+    <LinearLayout
+     ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:92: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+                <LinearLayout
+                 ~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_order_history.xml:11: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout
+     ~~~~~~~~~~~~
+
+   Explanation for issues of type "DisableBaselineAlignment":
+   When a LinearLayout is used to distribute the space proportionally between
+   nested layouts, the baseline alignment property should be turned off to
+   make the layout computation faster.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_category_list.xml:5: Warning: Possible overdraw: Root element paints background @color/bg_light with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/bg_light"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_checkout.xml:5: Warning: Possible overdraw: Root element paints background @color/gray_bg with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/gray_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:6: Warning: Possible overdraw: Root element paints background @color/bg_light with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/bg_light"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/white"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/white"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/white">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:5: Warning: Possible overdraw: Root element paints background @color/gray_bg with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/gray_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:6: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/white"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_cart.xml:5: Warning: Possible overdraw: Root element paints background @color/gray_bg with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/gray_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_category.xml:5: Warning: Possible overdraw: Root element paints background @color/gray_bg with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/gray_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_favorite.xml:5: Warning: Possible overdraw: Root element paints background @color/bg_light with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/bg_light">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_home.xml:5: Warning: Possible overdraw: Root element paints background @color/bg_light with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/bg_light">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:5: Warning: Possible overdraw: Root element paints background @color/gray_bg with a theme that also paints a background (inferred theme is @style/Theme.ShoppingApp) [Overdraw]
+    android:background="@color/gray_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\bg_add_button.xml:2: Warning: The resource R.drawable.bg_add_button appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\bg_banner_dark.xml:2: Warning: The resource R.drawable.bg_banner_dark appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\bg_payment_selected.xml:2: Warning: The resource R.drawable.bg_payment_selected appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\bg_quantity_box.xml:2: Warning: The resource R.drawable.bg_quantity_box appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\bg_quantity_button.xml:2: Warning: The resource R.drawable.bg_quantity_button appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\bg_swipe_delete.xml:2: Warning: The resource R.drawable.bg_swipe_delete appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_basketball.png: Warning: The resource R.drawable.cat_basketball appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_boots.png: Warning: The resource R.drawable.cat_boots appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_casual.png: Warning: The resource R.drawable.cat_casual appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_running.png: Warning: The resource R.drawable.cat_running appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_sneakers.png: Warning: The resource R.drawable.cat_sneakers appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.primary appears to be unused [UnusedResources]
+    <color name="primary">#2C3E50</color>
+           ~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:9: Warning: The resource R.color.bg_card appears to be unused [UnusedResources]
+    <color name="bg_card">#FFFFFF</color>
+           ~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:15: Warning: The resource R.color.text_secondary appears to be unused [UnusedResources]
+    <color name="text_secondary">#636E72</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:16: Warning: The resource R.color.red_heart appears to be unused [UnusedResources]
+    <color name="red_heart">#E74C3C</color>
+           ~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:18: Warning: The resource R.color.star_yellow appears to be unused [UnusedResources]
+    <color name="star_yellow">#F39C12</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:20: Warning: The resource R.color.orange_sale appears to be unused [UnusedResources]
+    <color name="orange_sale">#E67E22</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:25: Warning: The resource R.color.green_light appears to be unused [UnusedResources]
+    <color name="green_light">#D6EAF8</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\colors.xml:26: Warning: The resource R.color.green_very_light appears to be unused [UnusedResources]
+    <color name="green_very_light">#EBF5FB</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\ic_add.xml:2: Warning: The resource R.drawable.ic_add appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\mipmap-hdpi\ic_launcher.webp: Warning: The resource R.mipmap.ic_launcher appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\ic_launcher_background.xml:2: Warning: The resource R.drawable.ic_launcher_background appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\ic_launcher_foreground.xml:1: Warning: The resource R.drawable.ic_launcher_foreground appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_category_home.xml:2: Warning: The resource R.layout.item_category_home appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_air_max_90.png: Warning: The resource R.drawable.prod_air_max_90 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_chelsea_boot.png: Warning: The resource R.drawable.prod_chelsea_boot appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_chuck_taylor.png: Warning: The resource R.drawable.prod_chuck_taylor appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_club_c_85.png: Warning: The resource R.drawable.prod_club_c_85 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_curry_11.png: Warning: The resource R.drawable.prod_curry_11 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_dr_martens_1460.png: Warning: The resource R.drawable.prod_dr_martens_1460 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_fresh_foam_1080.png: Warning: The resource R.drawable.prod_fresh_foam_1080 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_gazelle.png: Warning: The resource R.drawable.prod_gazelle appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_harden_8.png: Warning: The resource R.drawable.prod_harden_8 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_lebron_21.png: Warning: The resource R.drawable.prod_lebron_21 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_old_skool.png: Warning: The resource R.drawable.prod_old_skool appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_pegasus_40.png: Warning: The resource R.drawable.prod_pegasus_40 appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_stan_smith.png: Warning: The resource R.drawable.prod_stan_smith appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_superstar.png: Warning: The resource R.drawable.prod_superstar appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_timberland_6inch.png: Warning: The resource R.drawable.prod_timberland_6inch appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_ultraboost_light.png: Warning: The resource R.drawable.prod_ultraboost_light appears to be unused [UnusedResources]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:13: Warning: The resource R.string.add_to_cart appears to be unused [UnusedResources]
+    <string name="add_to_cart">Thêm vào giỏ</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:16: Warning: The resource R.string.register appears to be unused [UnusedResources]
+    <string name="register">Đăng ký</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.fullname_hint appears to be unused [UnusedResources]
+    <string name="fullname_hint">Họ và tên</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.phone_hint appears to be unused [UnusedResources]
+    <string name="phone_hint">Số điện thoại</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.email_hint appears to be unused [UnusedResources]
+    <string name="email_hint">Email</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.confirm_password_hint appears to be unused [UnusedResources]
+    <string name="confirm_password_hint">Xác nhận mật khẩu</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.invoice_title appears to be unused [UnusedResources]
+    <string name="invoice_title">Hóa đơn</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:29: Warning: The resource R.string.welcome appears to be unused [UnusedResources]
+    <string name="welcome">Chào mừng bạn!</string>
+            ~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.confirm_order appears to be unused [UnusedResources]
+    <string name="confirm_order">Xác nhận đặt hàng</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:45: Warning: The resource R.string.no_account appears to be unused [UnusedResources]
+    <string name="no_account">Chưa có tài khoản?</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:46: Warning: The resource R.string.have_account appears to be unused [UnusedResources]
+    <string name="have_account">Đã có tài khoản?</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:49: Warning: The resource R.string.quantity appears to be unused [UnusedResources]
+    <string name="quantity">Số lượng</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:50: Warning: The resource R.string.added_to_cart_update appears to be unused [UnusedResources]
+    <string name="added_to_cart_update">Đã cập nhật giỏ hàng!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.favorite_empty appears to be unused [UnusedResources]
+    <string name="favorite_empty">Chưa có sản phẩm yêu thích</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\logo.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://d.android.com/r/studio-ui/designer/material/iconography) your
+   launcher icons should "use a distinct silhouette", a "three-dimensional,
+   front view, with a slight perspective as if viewed from above, so that
+   users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_basketball.png: Warning: Found bitmap drawable res/drawable/cat_basketball.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_boots.png: Warning: Found bitmap drawable res/drawable/cat_boots.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_casual.png: Warning: Found bitmap drawable res/drawable/cat_casual.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_running.png: Warning: Found bitmap drawable res/drawable/cat_running.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\cat_sneakers.png: Warning: Found bitmap drawable res/drawable/cat_sneakers.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\logo.png: Warning: Found bitmap drawable res/drawable/logo.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_air_max_90.png: Warning: Found bitmap drawable res/drawable/prod_air_max_90.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_chelsea_boot.png: Warning: Found bitmap drawable res/drawable/prod_chelsea_boot.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_chuck_taylor.png: Warning: Found bitmap drawable res/drawable/prod_chuck_taylor.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_club_c_85.png: Warning: Found bitmap drawable res/drawable/prod_club_c_85.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_curry_11.png: Warning: Found bitmap drawable res/drawable/prod_curry_11.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_dr_martens_1460.png: Warning: Found bitmap drawable res/drawable/prod_dr_martens_1460.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_fresh_foam_1080.png: Warning: Found bitmap drawable res/drawable/prod_fresh_foam_1080.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_gazelle.png: Warning: Found bitmap drawable res/drawable/prod_gazelle.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_harden_8.png: Warning: Found bitmap drawable res/drawable/prod_harden_8.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_lebron_21.png: Warning: Found bitmap drawable res/drawable/prod_lebron_21.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_old_skool.png: Warning: Found bitmap drawable res/drawable/prod_old_skool.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_pegasus_40.png: Warning: Found bitmap drawable res/drawable/prod_pegasus_40.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_stan_smith.png: Warning: Found bitmap drawable res/drawable/prod_stan_smith.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_superstar.png: Warning: Found bitmap drawable res/drawable/prod_superstar.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_timberland_6inch.png: Warning: Found bitmap drawable res/drawable/prod_timberland_6inch.png in densityless folder [IconLocation]
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\drawable\prod_ultraboost_light.png: Warning: Found bitmap drawable res/drawable/prod_ultraboost_light.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_grid.xml:140: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+            android:textSize="10sp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_list.xml:89: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:textSize="10sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_checkout.xml:68: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:37: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:48: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:61: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\dialog_add_review.xml:25: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_category.xml:39: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_home.xml:55: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:12: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:22: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:23: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:78: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:237: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:255: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageButton
+     ~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:263: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:55: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_cart.xml:33: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_category.xml:33: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_favorite.xml:50: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_home.xml:49: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:34: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:105: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_cart.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_category_grid.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_category_home.xml:12: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_home_category.xml:14: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_grid.xml:24: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_grid.xml:100: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_list.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\CartAdapter.java:69: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                holder.tvPrice.setText(formatter.format(product.getPrice()) + "đ/" + product.getUnit());
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\CartAdapter.java:89: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            holder.tvSubtotal.setText(formatter.format(subtotal) + "đ");
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\CartFragment.java:223: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvTotal.setText(formatter.format(total) + "đ");
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\CheckoutActivity.java:76: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    tvTotal.setText(formatter.format(order.getTotalAmount()) + "đ");
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\InvoiceActivity.java:105: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvInvoiceId.setText("#" + order.getId());
+                                    ~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\InvoiceActivity.java:108: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvInvoiceTotal.setText(formatter.format(order.getTotalAmount()) + "đ");
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderDetailAdapter.java:46: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.tvQuantity.setText("SL: " + detail.getQuantity());
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderDetailAdapter.java:46: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        holder.tvQuantity.setText("SL: " + detail.getQuantity());
+                                  ~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderDetailAdapter.java:47: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.tvUnitPrice.setText(formatter.format(detail.getUnitPrice()) + "đ");
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderDetailAdapter.java:49: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.tvSubtotal.setText(formatter.format(subtotal) + "đ");
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderHistoryAdapter.java:45: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.tvOrderId.setText("Đơn hàng #" + order.getId());
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderHistoryAdapter.java:45: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        holder.tvOrderId.setText("Đơn hàng #" + order.getId());
+                                 ~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\OrderHistoryAdapter.java:47: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.tvOrderTotal.setText(formatter.format(order.getTotalAmount()) + "đ");
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\OrderSuccessActivity.java:67: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvDeliveryDate.setText(fromDate + " - " + toDate);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\OrderSuccessActivity.java:77: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    tvOrderId.setText("#" + order.getId());
+                                      ~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\OrderSuccessActivity.java:78: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    tvTotal.setText(formatter.format(order.getTotalAmount()) + "đ");
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:76: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.tvPrice.setText(formatter.format(product.getPrice()) + "đ");
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:81: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                holder.tvOriginalPrice.setText(formatter.format(product.getOriginalPrice()) + "đ");
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\adapter\ProductAdapter.java:86: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                holder.tvSaleBadge.setText("-" + percent + "%");
+                                           ~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:175: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvReviewCount.setText("(" + product.getReviewCount() + " đánh giá)");
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:175: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvReviewCount.setText("(" + product.getReviewCount() + " đánh giá)");
+                                                                       ~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:178: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    tvStock.setText("Kho: " + product.getStockQuantity());
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:178: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    tvStock.setText("Kho: " + product.getStockQuantity());
+                                    ~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:185: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvPrice.setText(formatter.format(product.getPrice()) + "đ");
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:297: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                ((TextView)findViewById(R.id.tvReviewCount)).setText("(" + count + " đánh giá)");
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductDetailActivity.java:297: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                ((TextView)findViewById(R.id.tvReviewCount)).setText("(" + count + " đánh giá)");
+                                                                                   ~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\ProductListActivity.java:56: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvTitle.setText("Tất cả sản phẩm");
+                            ~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\java\com\example\shoppingapp\fragment\ProfileFragment.java:124: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            tvProfileUsername.setText("@" + sessionManager.getUsername());
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_category_list.xml:22: Warning: Hardcoded string "Quay lại", should use @string resource [HardcodedText]
+            android:contentDescription="Quay lại" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_checkout.xml:23: Warning: Hardcoded string "Quay lại", should use @string resource [HardcodedText]
+            android:contentDescription="Quay lại" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_checkout.xml:176: Warning: Hardcoded string "Chi tiết đơn hàng", should use @string resource [HardcodedText]
+                        android:text="Chi tiết đơn hàng"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:25: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
+            android:contentDescription="Back" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:31: Warning: Hardcoded string "Chi tiết đơn hàng", should use @string resource [HardcodedText]
+            android:text="Chi tiết đơn hàng"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:111: Warning: Hardcoded string "Ngày đặt", should use @string resource [HardcodedText]
+                            android:text="Ngày đặt"
+                            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:131: Warning: Hardcoded string "Khách hàng", should use @string resource [HardcodedText]
+                            android:text="Khách hàng"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:153: Warning: Hardcoded string "Số điện thoại", should use @string resource [HardcodedText]
+                            android:text="Số điện thoại"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:175: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+                            android:text="Email"
+                            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:196: Warning: Hardcoded string "Địa chỉ", should use @string resource [HardcodedText]
+                            android:text="Địa chỉ"
+                            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:220: Warning: Hardcoded string "Thanh toán", should use @string resource [HardcodedText]
+                            android:text="Thanh toán"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:252: Warning: Hardcoded string "Sản phẩm", should use @string resource [HardcodedText]
+                        android:text="Sản phẩm"
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_invoice.xml:280: Warning: Hardcoded string "Tổng cộng", should use @string resource [HardcodedText]
+                            android:text="Tổng cộng"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:32: Warning: Hardcoded string "Đăng nhập tài khoản", should use @string resource [HardcodedText]
+        android:text="Đăng nhập tài khoản"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:66: Warning: Hardcoded string "Đăng nhập", should use @string resource [HardcodedText]
+        android:text="Đăng nhập"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_login.xml:77: Warning: Hardcoded string "Chưa có tài khoản? Đăng ký ngay", should use @string resource [HardcodedText]
+        android:text="Chưa có tài khoản? Đăng ký ngay"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:33: Warning: Hardcoded string "Đặt hàng thành công!", should use @string resource [HardcodedText]
+        android:text="Đặt hàng thành công!"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:43: Warning: Hardcoded string "Cảm ơn bạn đã mua hàng. Đơn hàng của bạn đang được xử lý.", should use @string resource [HardcodedText]
+        android:text="Cảm ơn bạn đã mua hàng. Đơn hàng của bạn đang được xử lý."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:69: Warning: Hardcoded string "Mã đơn hàng", should use @string resource [HardcodedText]
+                    android:text="Mã đơn hàng"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:96: Warning: Hardcoded string "Phương thức", should use @string resource [HardcodedText]
+                    android:text="Phương thức"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:122: Warning: Hardcoded string "Tổng tiền", should use @string resource [HardcodedText]
+                    android:text="Tổng tiền"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:149: Warning: Hardcoded string "Dự kiến giao", should use @string resource [HardcodedText]
+                    android:text="Dự kiến giao"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:170: Warning: Hardcoded string "Xem đơn hàng", should use @string resource [HardcodedText]
+        android:text="Xem đơn hàng"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_order_success.xml:182: Warning: Hardcoded string "Tiếp tục mua sắm", should use @string resource [HardcodedText]
+        android:text="Tiếp tục mua sắm"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:108: Warning: Hardcoded string "Kho: 0", should use @string resource [HardcodedText]
+                            android:text="Kho: 0"/>
+                            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:188: Warning: Hardcoded string "Viết đánh giá", should use @string resource [HardcodedText]
+                                android:text="Viết đánh giá"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:24: Warning: Hardcoded string "Quay lại", should use @string resource [HardcodedText]
+            android:contentDescription="Quay lại" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:32: Warning: Hardcoded string "Sản phẩm", should use @string resource [HardcodedText]
+            android:text="Sản phẩm"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:43: Warning: Hardcoded string "Chuyển dạng hiển thị", should use @string resource [HardcodedText]
+            android:contentDescription="Chuyển dạng hiển thị" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:78: Warning: Hardcoded string "Không tìm thấy sản phẩm nào", should use @string resource [HardcodedText]
+        android:text="Không tìm thấy sản phẩm nào"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:25: Warning: Hardcoded string "App Logo", should use @string resource [HardcodedText]
+            android:contentDescription="App Logo" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:40: Warning: Hardcoded string "Tạo tài khoản mới", should use @string resource [HardcodedText]
+            android:text="Tạo tài khoản mới"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:50: Warning: Hardcoded string "Họ và tên", should use @string resource [HardcodedText]
+            android:hint="Họ và tên">
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:64: Warning: Hardcoded string "Số điện thoại", should use @string resource [HardcodedText]
+            android:hint="Số điện thoại">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:78: Warning: Hardcoded string "Tên đăng nhập", should use @string resource [HardcodedText]
+            android:hint="Tên đăng nhập">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:92: Warning: Hardcoded string "Mật khẩu", should use @string resource [HardcodedText]
+            android:hint="Mật khẩu"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:107: Warning: Hardcoded string "Xác nhận mật khẩu", should use @string resource [HardcodedText]
+            android:hint="Xác nhận mật khẩu"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:121: Warning: Hardcoded string "Đăng ký", should use @string resource [HardcodedText]
+            android:text="Đăng ký"
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_register.xml:132: Warning: Hardcoded string "Đã có tài khoản? Đăng nhập", should use @string resource [HardcodedText]
+            android:text="Đã có tài khoản? Đăng nhập"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\dialog_add_review.xml:11: Warning: Hardcoded string "Chọn số sao", should use @string resource [HardcodedText]
+        android:text="Chọn số sao"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\dialog_add_review.xml:32: Warning: Hardcoded string "Nhập nhận xét của bạn...", should use @string resource [HardcodedText]
+        android:hint="Nhập nhận xét của bạn..."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_cart.xml:56: Warning: Hardcoded string "Bắt đầu mua sắm", should use @string resource [HardcodedText]
+            android:text="Bắt đầu mua sắm"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_cart.xml:106: Warning: Hardcoded string "0đ", should use @string resource [HardcodedText]
+                    android:text="0đ"
+                    ~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_category.xml:44: Warning: Hardcoded string "Tìm danh mụcu2026", should use @string resource [HardcodedText]
+                android:hint="Tìm danh mục\u2026"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_favorite.xml:24: Warning: Hardcoded string "Yêu thích", should use @string resource [HardcodedText]
+                android:text="Yêu thích"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_favorite.xml:60: Warning: Hardcoded string "Chưa có sản phẩm yêu thích", should use @string resource [HardcodedText]
+            android:text="Chưa có sản phẩm yêu thích"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_home.xml:35: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
+                android:contentDescription="Search" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:44: Warning: Hardcoded string "Bạn chưa đăng nhập", should use @string resource [HardcodedText]
+            android:text="Bạn chưa đăng nhập"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:53: Warning: Hardcoded string "Đăng nhập để mua hàng và xem lịch sử đơn hàng", should use @string resource [HardcodedText]
+            android:text="Đăng nhập để mua hàng và xem lịch sử đơn hàng"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:200: Warning: Hardcoded string "Đang giao", should use @string resource [HardcodedText]
+                        android:text="Đang giao"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_profile.xml:223: Warning: Hardcoded string "Chưa có đơn hàng nào", should use @string resource [HardcodedText]
+                android:text="Chưa có đơn hàng nào"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_cart.xml:65: Warning: Hardcoded string "−", should use @string resource [HardcodedText]
+                    android:text="−"
+                    ~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_cart.xml:85: Warning: Hardcoded string "+", should use @string resource [HardcodedText]
+                    android:text="+"
+                    ~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_cart.xml:111: Warning: Hardcoded string "Xóa", should use @string resource [HardcodedText]
+            android:contentDescription="Xóa"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_order_detail.xml:39: Warning: Hardcoded string " × ", should use @string resource [HardcodedText]
+                android:text=" × "
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_grid.xml:49: Warning: Hardcoded string "SOLD OUT", should use @string resource [HardcodedText]
+                    android:text="SOLD OUT"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\item_product_grid.xml:125: Warning: Hardcoded string "Favorite", should use @string resource [HardcodedText]
+            android:contentDescription="Favorite" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:142: Warning: When you define paddingEnd you should probably also define paddingStart for right-to-left symmetry [RtlSymmetry]
+                            android:paddingEnd="16dp"
+                            ~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_detail.xml:152: Warning: When you define paddingStart you should probably also define paddingEnd for right-to-left symmetry [RtlSymmetry]
+                            android:paddingStart="16dp"
+                            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\activity_product_list.xml:68: Warning: When you define paddingStart you should probably also define paddingEnd for right-to-left symmetry [RtlSymmetry]
+            android:paddingStart="8dp"
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_category.xml:46: Warning: When you define paddingStart you should probably also define paddingEnd for right-to-left symmetry [RtlSymmetry]
+                android:paddingStart="8dp"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\OK\Downloads\HK2(25-26)\PhatTrienUngDungChoCacThietBiDiDong\MiniProject\ShoppingApp\app\src\main\res\layout\fragment_home.xml:62: Warning: When you define paddingStart you should probably also define paddingEnd for right-to-left symmetry [RtlSymmetry]
+                android:paddingStart="8dp"
+                ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+0 errors, 252 warnings
